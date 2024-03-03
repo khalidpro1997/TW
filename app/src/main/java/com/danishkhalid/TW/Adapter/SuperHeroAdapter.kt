@@ -14,7 +14,10 @@ class SuperHeroAdapter(private var items: List<SuperHero>,private val listener:O
     interface OnItemClickListener {
         fun onItemClick(superHero: SuperHero)
     }
-
+    fun updateDataSet(newItems: List<SuperHero>) {
+        items = newItems
+        notifyDataSetChanged()
+    }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageView: ImageView = itemView.findViewById(R.id.superHeroIv)

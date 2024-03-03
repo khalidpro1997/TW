@@ -60,6 +60,8 @@ class MainActivity : AppCompatActivity(), SuperHeroAdapter.OnItemClickListener {
         items = items.map {
             SuperHero(it.superHeroimg, it.superHeroName, getRating(it.superHeroName))
         }
+
+        adapter.updateDataSet(items)
         adapter.notifyDataSetChanged()
     }
 }
