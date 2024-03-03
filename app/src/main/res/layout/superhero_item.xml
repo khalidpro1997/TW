@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- item_layout.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <!-- Image View -->
+    <ImageView
+        android:id="@+id/superHeroIv"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background" />
+
+    <!-- Text Container -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp">
+
+        <!-- Superhero Name TextView -->
+        <TextView
+            android:id="@+id/superHeroNameTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="test"
+            android:paddingTop="8dp"/>
+
+        <!-- Superhero Rating TextView -->
+        <TextView
+            android:id="@+id/superHeroRatingTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="test"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:paddingTop="8dp"/>
+    </LinearLayout>
+
+</LinearLayout>
