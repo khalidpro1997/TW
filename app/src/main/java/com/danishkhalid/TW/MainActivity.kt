@@ -28,9 +28,9 @@ class MainActivity : AppCompatActivity(), SuperHeroAdapter.OnItemClickListener {
         toolbar = findViewById(R.id.toolbar)
         sharedPreferences = Avengers.preferences
 
-        val superManRating = getRating("SuperMan")
+        val superManRating = getRating("Super Man")
         val hulkRating = getRating("Hulk")
-        val ironManRating = getRating("IronMan")
+        val ironManRating = getRating("Iron Man")
 
         items = listOf(
             SuperHero(R.drawable.superman, "Super Man", superManRating),
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity(), SuperHeroAdapter.OnItemClickListener {
     }
 
     private fun getRating(superheroName: String): Float {
-        val superheroRatingKey = superheroName.replace("\\s".toRegex(), "")
+        val superheroRatingKey = superheroName
         Log.d("SuperHeroRatings", "Rating for $superheroName: ${sharedPreferences.getFloat(superheroRatingKey, -1.0f)}")
         return sharedPreferences.getFloat(superheroRatingKey, -1.0f)
     }
