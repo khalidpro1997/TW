@@ -10,10 +10,11 @@ import com.danishkhalid.TW.R
 import com.danishkhalid.TW.model.SuperHero
 import com.squareup.picasso.Picasso
 
-class SuperHeroAdapter(private val items: List<SuperHero>,private val listener:OnItemClickListener):RecyclerView.Adapter<SuperHeroAdapter.ViewHolder>() {
+class SuperHeroAdapter(private var items: List<SuperHero>,private val listener:OnItemClickListener):RecyclerView.Adapter<SuperHeroAdapter.ViewHolder>() {
     interface OnItemClickListener {
         fun onItemClick(superHero: SuperHero)
     }
+
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageView: ImageView = itemView.findViewById(R.id.superHeroIv)
